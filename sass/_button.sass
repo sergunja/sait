@@ -1,0 +1,83 @@
+.dws
+ top: 90%
+ left: 90%
+ transform: translate(-90%, -90%)
+ position: fixed
+ cursor: pointer
+ 
+ z-index: 1000
+
+.pulse
+ width: 90px
+ height: 90px
+ color: #fff
+ text-align: center
+ background: #0ab4ea
+ border-radius: 50%
+ position: relative
+ 
+.phone
+ position: absolute
+ font-size: 50px
+ text-align: center
+ width: 90px
+ height: 90px
+ line-height: 94px
+ animation: phone .9s ease-in-out infinite
+
+.text
+ opacity: 0
+ position: absolute
+ text-transform: uppercase
+ font-weight: 700
+ font-family: 'Heebo'
+ top: 25px
+ left: 0
+ font-size: 15px
+ transform: scaleX(-1)
+ transition: .5s ease-in-out
+.phone i
+ transition: .5s ease-in-out
+
+.pulse:hover i 
+ transition: .5s ease-in-out
+ transform: scale(0)
+
+.pulse:hover .text
+ transform: scaleX(1)
+ transition: .5s ease-in-out
+ opacity: 1
+
+.pulse:hover::before,
+.pulse:hover::after
+	content: ""
+	position: absolute
+	border: 1px solid #0ab4ea
+	left: -20px
+	right: -20px
+	top: -20px
+	bottom: -20px
+	border-radius: 50%
+	animation: puls 1.8s linear infinite
+	opacity: 0
+
+.pulse:hover::after
+ animation-delay: .5s
+
+
+@keyframes phone
+	0%, 100%
+		transform: rotate(-20deg)
+	50%
+	 transform: rotate(21deg)
+
+
+@keyframes puls
+	0%
+		transform: scale(0.5)
+		opacity: 0
+	50%
+	 opacity: 1
+	100%
+	 transform: scale(1.2)
+	 opacity: 0

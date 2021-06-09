@@ -1,0 +1,90 @@
+
+.menu
+	&-link
+		display: block
+		z-index: 999
+		width: 23px
+		height: 17px
+		background-color: transparent
+		border-radius: 50%
+		position: fixed
+		top: 20px
+		left: 20px
+.span, span:before, span:after
+		display: block
+		height: 2px
+		width: 20px
+		position: absolute
+		left: 50%
+		margin-left: -10px
+		top: 50%
+		margin-top: -1px
+		background-color: #000
+		z-index: 50
+.span:before
+	transition: all 0.2s
+	content: ""
+	margin-top: -6px
+.span:after
+	transition: all 0.2s
+	content: ""
+	margin-top: 4px
+.menu-link_active span
+	background-color: transparent
+	&:before
+		transform: rotate(135deg)
+		margin-top: 0
+	&:after
+		transform: rotate(-135deg)
+		margin-top: 0
+.menu-o
+	opacity: 0.9
+	background-color: #343a40
+	position: fixed
+	width: 100%
+	height: 100%
+	z-index: 10
+	display: flex
+	text-transform: uppercase
+	justify-content: center
+	align-items: center
+	transition: all 0.5s
+	bottom: -200%
+.menu-o_active
+	bottom: 0%
+.menu-o ul
+	list-style: none
+ padding: 0
+ text-align: center
+.menu-o	a 
+	display: block
+	font-family: 'Roboto'
+	width: 100%
+	color: #fff
+	line-height: 3
+	font-size: 20px
+	font-weight: 100
+	letter-spacing: 2px
+	transition: all 0.5s
+.menu-o a:hover
+	text-decoration: none
+	color: #ffa
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
